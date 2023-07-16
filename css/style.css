@@ -84,7 +84,7 @@ h2{
   padding-bottom: 1%;
   margin-left: 0.5%;
   width: 99%;
-  height: 4rem;
+  height: 50px;
 }
 
 .footer-a{
@@ -134,13 +134,12 @@ h2{
     gap: 0;
   }
 
-  .footer {
-    flex-direction: column;
-  }
-
   .container-content{
     max-width: 60%;
     align-items: center;
   }
 
+  .footer {
+    flex-direction: column;
+  }
 }

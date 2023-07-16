@@ -71,6 +71,34 @@ li > a:hover{
     grid-column-start: 1;
     grid-column-end: 1;
   }
+}
 
+@media  (max-width: 600px) {
+  .food-type-image{
+    height: 60%;
+  }
+  }
+
+@media (max-height: 500px) {
+  ul, ul li{
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-height: 350px) {
+  ul, ul li{
+    padding-bottom: 1rem;
+  }
+
+  .footer{
+    margin-top: 15%;
+  }
+
+}
+
+@media (max-height: 250px) {
+  ul, ul li{
+    padding-bottom: 0rem;
+  }
 }
 
