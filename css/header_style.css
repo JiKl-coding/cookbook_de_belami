@@ -1,3 +1,11 @@
+.hamburger-icon{
+  display:none;
+}
+
+.hamburger-icon-container{
+  display:none;
+}
+
 .header{
 
   background-color: var(--main-color);
@@ -23,6 +31,10 @@
   width: 9vh;
 }
 
+#h1-home{
+  display: none;
+}
+
 .header-buttons{
   text-decoration: none;
   color: var(--main-text-color);
@@ -43,6 +55,7 @@ h1{
 
 .header-buttons:hover {
   color: var(--hover-button-color);
+  transform: scale(1.15);
 }
 
 #home-button{
@@ -66,6 +79,49 @@ h1{
 
 @media (max-width: 700px){
   h1{
+    display:none;
+  }
+
+  #h1-home{
+    display: inline-block;
     font-size: 1.5rem;
+    font-family: var(--h1-font);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--main-text-color);
+  }
+
+  #h1-home:hover{
+    color: var(--hover-button-color);
+    transform: scale(1.15);
+  }
+
+  .header-buttons{
+    display:none;
+  }
+
+  .hamburger-icon-container{
+    display: inline-block;
+    width: 8vh;
+    order: -1;
+  }
+
+  .hamburger-icon{
+    padding-top: 6%;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .hamburger-icon-container:hover{
+    transform: scale(1.15);
+  }
+
+  .main-icon{
+    order: 10;
+  }
+
+  .header{
+    justify-content: space-evenly;
+    gap: 15%;
   }
 }

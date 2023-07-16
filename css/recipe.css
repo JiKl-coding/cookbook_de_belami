@@ -1,0 +1,111 @@
+.main-container{
+  margin-top: 20vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px;
+  z-index: 10;
+  position: relative;
+  width: 99%;
+  left: 0.5%;
+}
+
+.food-image-cell{
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vh;
+}
+
+.food-image{
+  height: 80%;
+}
+
+.ingredients-cell{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: left;
+  margin-left: 50%;
+  margin-top: 10vh;
+}
+
+.tab-container{
+  padding: 0;
+  min-width: 26rem;
+  min-height: 5rem;
+  text-align: left;
+}
+
+table th{
+  min-width: 12.5rem;
+  max-width: 12.5rem;
+  font-family: var(--main-font);
+  font-weight: normal;
+  padding: 0;
+  padding-top: 1.5%;
+  margin: 0;
+}
+
+#ingredients{
+  border-bottom: black solid 1px;
+}
+
+#recipe-header{
+  width: 100%;
+}
+
+.recipe-cell{
+  display:flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: left;
+  margin-top: 10vh;
+}
+
+@media  (max-width: 900px) {
+  .main-container{
+    margin-top: 20vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+  .food-image-cell{
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+  .food-image{
+    height: 60%;
+  }
+
+  .ingredients-cell{
+    margin-left: 0;
+  }
+
+  #ingredients{
+    text-align: center;
+  }
+
+  .recipe-cell{
+    margin-top: 0;
+  }
+  #recipe-header{
+    text-align: center;
+  }
+
+  .tab-container{
+    min-width: 20rem;
+  }
+  
+  table th{
+    min-width: 9.5rem;
+    max-width: 9.5rem;
+  }
+}

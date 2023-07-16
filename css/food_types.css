@@ -1,0 +1,76 @@
+.food-type-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  margin-top: 15vh;
+  height: 100vh;
+  z-index: 10;
+  position: relative;
+  width: 99%;
+  left: 0.5%;
+}
+
+.cell{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+.h2-cell{
+  grid-column: 1;
+  grid-column-end: 3;
+  height: 20vh;
+}
+
+.food-type-image{
+  height: 80%;
+}
+
+.food-type-cell{
+  justify-content: start;
+}
+
+.recipes-list{
+  justify-content: start;
+  padding-top: 3%;
+}
+
+
+ul, ul li{
+  font-family: var(--h1-font);
+  font-size: 2rem;
+  font-weight: bold;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 4rem;
+}
+
+li > a{
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+li > a:hover{
+  color: var(--hover-button-color);
+  box-shadow: 2px 2px 4px grey;
+}
+
+
+
+@media  (max-width: 900px){
+  .food-type-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    height: 100%;
+  }
+
+  .h2-cell{
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+}
+

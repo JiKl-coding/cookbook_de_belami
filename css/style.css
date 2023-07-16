@@ -20,32 +20,18 @@ body {
   background-color: var(--main-color);
 }
 
-h2{
-  align-self: center;
-  color: var(--home-button);
-  font-family: var(--h1-font);
-  font-size: 3rem;
-  margin: 0;
-  padding: 0;
-}
 
 .main-grid-container{
   display: grid;
   background-color: var(--main-color);;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr;
-  gap: 10px;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   margin-top: 20vh;
   z-index: 10;
   position: relative;
-}
-
-.grid-flex-container{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 4.8%;
-  margin-right: 4.8%;
+  width: 99%;
+  left: 0.5%;
 }
 
 .border-line{
@@ -56,29 +42,49 @@ h2{
   height: 80%
 }
 
-.img-container{
+.image-cell{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70vh;
+
 }
 
-.text-container{
+.text-cell{
   display: flex;
-  height: 70vh;
   flex-direction: column;
   justify-content: center;
   align-items:center;
-  margin-left: 15%;
-  margin-right: 15%;
+}
+
+.text-cell:last-child{
+  border-bottom: 0;
+}
+
+.container-content{
+  max-width: 50%;
+  align-items: center;
+}
+
+h2{
+  align-self: center;
+  color: var(--home-button);
+  font-family: var(--h1-font);
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
 }
 
 .footer{
-  display: inline-flex;
+  display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-top: 1%;
+  margin-top: 8vh;
+  padding-bottom: 1%;
   margin-left: 0.5%;
   width: 99%;
+  height: 4rem;
 }
 
 .footer-a{
@@ -87,22 +93,39 @@ h2{
 }
 
 .footer-a:hover{
-  color: var(--home-button);
+  color: var((--home-button));
+  transform: scale(1.15);
+}
+
+@media  (max-width: 1200px) {
+  .image-cell{
+    height: 50vh;
+  }
 }
 
 @media  (max-width: 900px) { 
-  .grid-flex-container{
-    flex-direction: column;
+
+  .main-grid-container{
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1fr;
   }
 
   #second-image{
-    order: -1;
+    grid-row-start: 3;
   }
 
   p{
     margin: 0;
   }
+
+  .container-content{
+    max-width: 60%;
+    align-items: center;
+  }
+
 }
+
+
 
 @media (max-width: 700px) {
 
@@ -111,11 +134,13 @@ h2{
     gap: 0;
   }
 
-  .img-container{
-    height: 50vh;
-  }
-
   .footer {
     flex-direction: column;
   }
+
+  .container-content{
+    max-width: 60%;
+    align-items: center;
+  }
+
 }
