@@ -71,6 +71,21 @@ li > a:hover{
     grid-column-start: 1;
     grid-column-end: 1;
   }
+
+  h2{
+    font-size: 2rem;
+  }
+
+  ul, ul li{
+    font-family: var(--h1-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 4rem;
+  }
+
 }
 
 @media  (max-width: 600px) {
@@ -78,6 +93,7 @@ li > a:hover{
     height: 60%;
   }
   }
+
 
 @media (max-height: 500px) {
   ul, ul li{
@@ -96,9 +112,5 @@ li > a:hover{
 
 }
 
-@media (max-height: 250px) {
-  ul, ul li{
-    padding-bottom: 0rem;
-  }
-}
+
 
