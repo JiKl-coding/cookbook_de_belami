@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cookbook de Bel-Ami</title>
+    <title>Cookbook de Bel-Ami - Main Dishes</title>
 
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/header_style.css" />
     <link rel="stylesheet" href="../css/food_types.css">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,28 +16,51 @@
       href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <script src="../script.js" defer></script>
   </head>
 
   <body>
-    <!--FIXED HEADER-->
-    <div class="header">
-      <img
-        class="main-icon"
-        src="../assets/icons/main_icon.png"
-        alt="plate icon"
-      />
-      <h1>Cookbook de Bel-Ami</h1>
-      <a id="h1-home" href="../index.html">Cookbook de Bel-Ami</a>
-      <div class="hamburger-icon-container">
-        <img class="hamburger-icon" src="../assets/icons/wooden-spoons-icon.png" alt="hamburger-icon that looks like wooden spoons">
+
+    <nav class="navbar">
+
+      <div class="brand-icon">
+        <img class="brand-icon" src="../assets/icons/main_icon.png" alt="cook icon">
       </div>
-  
-      <a href="../index.html" id="home-button" class="header-buttons">HOME</a>
-      <a href="../html/appetizers.html" class="header-buttons">PŘEDKRMY</a>
-      <a href="../html/main dish.html" class="header-buttons">HLAVNÍ CHODY</a>
-      <a href="../html/desserts.html" class="header-buttons">DEZERTY</a>
-      <a href="#" class="header-buttons">VZOROVÉ MENU</a>
+
+      <div class="brand-title">
+        Cookbook de Bel-Ami
+      </div>
+
+      <a href="#" class="toggle-button">
+        <img id="toggle-image" src="../assets/icons/wooden-spoons-icon.png" alt="toggle button">
+      </a>
+
+      <div class="navbar-links">
+        
+        <ul>
+          <li><a id="home-button" href="../index.html">HOME</a></li>
+          <li><a href="../html/appetizers.html">PŘEDKRMY</a></li>
+          <li><a href="../html/main dish.html">HLAVNÍ CHODY</a></li>
+          <li><a href="../html/desserts.html">DEZERTY</a></li>
+          <li><a href="#">VZOROVÉ MENU</a></li>
+        </ul>
+
+      </div>
+
+    </nav>
+
+    <div class="navbar-links" id="toggle">
+        
+      <ul>
+        <li><a id="home-button" href="../index.html">HOME</a></li>
+        <li><a href="../html/appetizers.html">PŘEDKRMY</a></li>
+        <li><a href="../html/main dish.html">HLAVNÍ CHODY</a></li>
+        <li><a href="../html/desserts.html">DEZERTY</a></li>
+        <li><a href="#">VZOROVÉ MENU</a></li>
+      </ul>
+
     </div>
+
 
     <div class="food-type-container">
       <div class="h2-cell cell">

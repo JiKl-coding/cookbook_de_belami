@@ -22,6 +22,7 @@
 
 .food-image{
   height: 80%;
+  border-radius: 0.5%;
 }
 
 .ingredients-cell{

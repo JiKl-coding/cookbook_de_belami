@@ -38,7 +38,7 @@
 }
 
 
-ul, ul li{
+.food-type-container ul, .food-type-container ul li{
   font-family: var(--h1-font);
   font-size: 2rem;
   font-weight: bold;
@@ -48,12 +48,12 @@ ul, ul li{
   padding-bottom: 4rem;
 }
 
-li > a{
+.food-type-container li > a{
   text-decoration: none;
   color: var(--main-text-color);
 }
 
-li > a:hover{
+.food-type-container li > a:hover{
   color: var(--hover-button-color);
   box-shadow: 2px 2px 4px grey;
 }
@@ -76,7 +76,7 @@ li > a:hover{
     font-size: 2rem;
   }
 
-  ul, ul li{
+  .food-type-container ul,  .food-type-container ul li{
     font-family: var(--h1-font);
     font-size: 1.5rem;
     font-weight: bold;
@@ -96,13 +96,13 @@ li > a:hover{
 
 
 @media (max-height: 500px) {
-  ul, ul li{
+  .food-type-container ul, .food-type-container ul li{
     padding-bottom: 2rem;
   }
 }
 
 @media (max-height: 350px) {
-  ul, ul li{
+  .food-type-container ul, .food-type-container ul li{
     padding-bottom: 1rem;
   }
 

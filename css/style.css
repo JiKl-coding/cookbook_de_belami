@@ -39,7 +39,8 @@ body {
 }
 
 .main-page-img{
-  height: 80%
+  height: 80%;
+  border-radius: 0.5%;
 }
 
 .image-cell{
@@ -84,7 +85,7 @@ h2{
   padding-bottom: 1%;
   margin-left: 0.5%;
   width: 99%;
-  height: 50px;
+  height: 80px;
 }
 
 .footer-a{
