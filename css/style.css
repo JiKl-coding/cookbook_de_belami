@@ -143,4 +143,8 @@ h2{
   .footer {
     flex-direction: column;
   }
+
+  .image-cell{
+    height: 40vh;
+  }
 }
