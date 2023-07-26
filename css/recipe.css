@@ -36,10 +36,44 @@
 }
 
 .tab-container{
+  display: flex;
   padding: 0;
   min-width: 26rem;
   min-height: 5rem;
   text-align: left;
+}
+
+.portions{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-block: 5px;
+  border-bottom: black solid 1px;
+}
+
+.portions button{
+  margin-top: 5px;
+  height: 30px;
+  width: 25%;
+  border: none;
+  background-color: transparent;
+  font-family: var(--main-font);
+  cursor: pointer;
+  border-radius: 10%;
+  border-top: rgb(204, 204, 204) solid 0.5px;
+  border-bottom: rgb(204, 204, 204) solid 0.5px;
+}
+
+.portions button:hover{
+  box-shadow: 2px 2px grey;
+}
+
+.portions button:active{
+  box-shadow: 2px 2px 4px black;
+}
+
+.portions p {
+  margin: 0;
 }
 
 table th{
@@ -53,6 +87,7 @@ table th{
 }
 
 #ingredients{
+  width: 100%;
   border-bottom: black solid 1px;
 }
 

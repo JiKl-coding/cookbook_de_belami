@@ -17,6 +17,7 @@
     />
 
     <script src="../../../script.js" defer></script>
+    <script src="../../../recipe.js" defer></script>
   </head>
 
   <body>
@@ -77,7 +78,11 @@
         </div>
 
         <div class="tab-container">
-          <p>Počet porcí: 2</p>
+          <div class="portions">
+            <p>Počet porcí: <span data-portions>2</span></p>
+            <button data-button>+</button>
+            <button data-button>-</button>
+          </div>
         </div>
 
 
@@ -85,23 +90,23 @@
           <table>
             <tr>
               <th>Mrkev</th>
-              <th>360 g</th>
+              <th><span data-ingredient-amount>360</span> g</th>
             </tr>
             <tr>
               <th>Čerstvý sýr (Lučina)</th>
-              <th>150 g</th>
+              <th><span data-ingredient-amount>150</span> g</th>
             </tr>
             <tr>
               <th>Olej</th>
-              <th>15 ml</th>
+              <th><span data-ingredient-amount>15</span> ml</th>
             </tr>
             <tr>
               <th>Římský kmín</th>
-              <th>dle chuti</th>
+              <th><span data-ingredient-amount></span>dle chuti</th>
             </tr>
             <tr>
               <th>Kari</th>
-              <th>dle chuti</th>
+              <th><span data-ingredient-amount></span>dle chuti</th>
             </tr>
           </table>
 
