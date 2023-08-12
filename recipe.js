@@ -25,7 +25,11 @@ class IngredientsCalculator {
       const oldValue = parseFloat(amount.innerHTML);
       if (!isNaN(oldValue)) {
           const newValue = ((oldValue/oldAmount)*newAmount);
-          amount.innerHTML = newValue;
+          if (Number.isInteger(newValue)) {
+            amount.innerHTML = newValue;
+          } else {
+            amount.innerHTML = newValue.toFixed(1);
+          } 
       }
     })
   }

@@ -115,7 +115,7 @@ table th{
     margin-top: 20vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
 }
 
   .food-image-cell{
@@ -149,8 +149,12 @@ table th{
 }
 
 @media  (max-width: 600px) {
+
+  .food-image-cell{
+    height: 50vh;;
+  }
   .food-image{
-    height: 45%;
+    height: 60%;
   }
 
   }
