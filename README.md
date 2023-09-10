@@ -1,2 +1,2 @@
 # cookbook_de_belami
-My personal cookbook
+Personal cookbook of me and my wife
