@@ -484,6 +484,16 @@ table th{
   padding-top: 3%;
 }
 
+#recipes-list > ul > li{
+  padding-bottom: 12px;
+  cursor: pointer;
+}
+
+#recipes-list > ul > li:hover{
+    color: var(--hover-button-color);
+    box-shadow: 2px 2px 4px grey;
+  }
+
 .food-type-container ul, .food-type-container ul li{
   font-family: var(--h1-font);
   font-size: 2rem;
