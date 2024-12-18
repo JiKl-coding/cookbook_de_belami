@@ -114,19 +114,39 @@ document.addEventListener("DOMContentLoaded", function() {
               const headerCell = document.createElement('th');
               headerCell.colSpan = 2;
               headerCell.innerHTML = `<strong>${ingredient.replace(/<|>/g, '')}</strong>`;
-              headerRow.appendChild(headerCell);
               ingredientsTable.appendChild(headerRow);
             } else {
               const [name, amount] = ingredient.split(':');
+              let amountValue = '';
+              let unit = amount || '';
+              if (amount) {
+                const match = amount.match(/^(\d+(\.\d+)?)(.*)$/);
+                if (match) {
+                  amountValue = match[1];
+                  unit = match[3].trim();
+                }
+              }
               const row = document.createElement('tr');
               const nameCell = document.createElement('th');
               const amountCell = document.createElement('th');
               nameCell.textContent = name;
-              amountCell.innerHTML = `<span data-ingredient-amount>${amount}</span>`;
+              amountCell.innerHTML = `<span data-ingredient-amount>${amountValue}</span> ${unit}`;
               row.appendChild(nameCell);
               row.appendChild(amountCell);
               ingredientsTable.appendChild(row);
             }
+          });
+
+          // Initialize IngredientsCalculator after ingredients are loaded
+          const portions = document.getElementById("recipe-portions");
+          const ingredients = document.querySelectorAll("[data-ingredient-amount]");
+          const buttons = document.querySelectorAll("[data-button]");
+
+          const ingredientsCalculator = new IngredientsCalculator(ingredients, portions);
+          buttons.forEach(button => {
+            button.addEventListener('click', () => {
+              ingredientsCalculator.change(button);
+            });
           });
         } else {
           console.log('Recipe not found for ID:', recipeId); // Debugging statement

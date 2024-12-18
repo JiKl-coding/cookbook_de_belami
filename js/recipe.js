@@ -49,7 +49,9 @@ class IngredientsCalculator {
   }
 }
 
-const portions = document.querySelector("[data-portions]");
+/* moved to script.js */
+/* 
+const portions = document.getElementById("recipe-portions");
 const ingredients = document.querySelectorAll("[data-ingredient-amount]");
 const buttons = document.querySelectorAll("[data-button]");
 
@@ -59,3 +61,4 @@ buttons.forEach(button => {
     ingredientsCalculator.change(button);
   });
 });
+*/
