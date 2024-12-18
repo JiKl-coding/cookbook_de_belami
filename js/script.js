@@ -167,3 +167,6 @@ class Recipe {
   }
 }
 
+document.getElementById('scroll-arrow').addEventListener('click', function() {
+  document.getElementById('tab-container').scrollIntoView({ behavior: 'smooth' });
+});
