@@ -1,0 +1,29 @@
+# Ignorovat složku node_modules (závislosti Node.js)
+node_modules/
+
+# Ignorovat soubory a složky buildu (pokud používáš build procesy)
+dist/
+build/
+
+# Ignorovat dočasné soubory editorů a systémů
+*.swp
+*.log
+*.tmp
+*.bak
+*.DS_Store
+Thumbs.db
+
+# Ignorovat prostředí
+.env
+.env.local
+.env.*.local
+
+# Ignorovat debugovací soubory
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorovat cache
+.cache/
+.vscode/
+.idea/
