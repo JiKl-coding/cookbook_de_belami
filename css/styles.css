@@ -471,7 +471,7 @@ table th {
 .h2-cell {
   grid-column: 1;
   grid-column-end: 3;
-  height: 20vh;
+  height: 10vh;
 }
 
 .food-type-image {
@@ -505,7 +505,7 @@ table th {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 @media (max-width: 900px) {
@@ -599,4 +599,48 @@ table th {
   100% {
     transform: scale(1);
   }
+}
+
+.navigation-arrows {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.navigation-arrows a {
+  background-color: transparent;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--main-text-color);
+  font-family: var(--h1-font);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navigation-arrows a:hover {
+  color: var(--hover-button-color);
+  box-shadow: 2px 2px 4px grey;
+}
+
+.navigation-arrows a#prev-arrow {
+  text-align: left;
+  margin-right: auto; /* Move closer to the center */
+}
+
+.navigation-arrows a#next-arrow {
+  text-align: right;
+  margin-left: auto; /* Move closer to the center */
+}
+
+.navigation-arrows button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.navigation-arrows button:hover {
+  background-color: #e0e0e0;
 }

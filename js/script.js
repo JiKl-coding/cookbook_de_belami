@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const currentPage = window.location.pathname.split("/").pop(); // Move currentPage declaration here
+  const currentPage = window.location.pathname.split("/").pop();
 
   fetch('partials/navbar.html')
     .then(response => response.text())
@@ -58,14 +58,21 @@ document.addEventListener("DOMContentLoaded", function() {
       // Store recipes globally
       window.recipes = recipes;
 
-      // Generate recipe list
-      const recipesList = document.getElementById('recipes-list');
-      if (recipesList) {
-        const ul = document.createElement('ul');
-        recipes.forEach(recipe => {
-          if ((recipe.type === 'dish' && currentPage === 'main_dish.html') ||
-              (recipe.type === 'appetizer' && currentPage === 'appetizers.html') ||
-              (recipe.type === 'dessert' && currentPage === 'desserts.html')) {
+      // Pagination variables
+      let currentPageIndex = 0;
+      const recipesPerPage = 6; // Change to 6 recipes per page
+
+      // Function to render recipes with pagination
+      function renderRecipes(recipes, type) {
+        const recipesList = document.getElementById('recipes-list');
+        if (recipesList) {
+          recipesList.innerHTML = '';
+          const ul = document.createElement('ul');
+          const start = currentPageIndex * recipesPerPage;
+          const end = start + recipesPerPage;
+          const paginatedRecipes = recipes.filter(recipe => recipe.type === type).slice(start, end);
+
+          paginatedRecipes.forEach(recipe => {
             const li = document.createElement('li');
             li.textContent = recipe.name;
             li.addEventListener('click', (event) => {
@@ -73,9 +80,57 @@ document.addEventListener("DOMContentLoaded", function() {
               window.location.href = `recipe.html?id=${recipe.id}`;
             });
             ul.appendChild(li);
-          }
-        });
-        recipesList.appendChild(ul);
+          });
+
+          recipesList.appendChild(ul);
+
+          // Create and append navigation arrows
+          const navContainer = document.createElement('div');
+          navContainer.classList.add('navigation-arrows');
+
+          const prevArrow = document.createElement('a');
+          prevArrow.id = 'prev-arrow';
+          prevArrow.textContent = '<';
+          prevArrow.style.display = currentPageIndex > 0 ? 'inline' : 'none';
+          prevArrow.addEventListener('click', (event) => {
+            event.preventDefault();
+            if (currentPageIndex > 0) {
+              currentPageIndex--;
+              renderRecipes(window.recipes, recipeType);
+            }
+          });
+
+          const nextArrow = document.createElement('a');
+          nextArrow.id = 'next-arrow';
+          nextArrow.textContent = '>';
+          nextArrow.style.display = end < recipes.filter(recipe => recipe.type === type).length ? 'inline' : 'none';
+          nextArrow.addEventListener('click', (event) => {
+            event.preventDefault();
+            if ((currentPageIndex + 1) * recipesPerPage < window.recipes.filter(recipe => recipe.type === recipeType).length) {
+              currentPageIndex++;
+              renderRecipes(window.recipes, recipeType);
+            }
+          });
+
+          navContainer.appendChild(prevArrow);
+          navContainer.appendChild(nextArrow);
+          recipesList.appendChild(navContainer);
+        }
+      }
+
+      // Determine the type of recipes to display based on the current page
+      let recipeType;
+      if (currentPage === 'main_dish.html') {
+        recipeType = 'dish';
+      } else if (currentPage === 'appetizers.html') {
+        recipeType = 'appetizer';
+      } else if (currentPage === 'desserts.html') {
+        recipeType = 'dessert';
+      }
+
+      // Generate recipe list with pagination
+      if (recipeType) {
+        renderRecipes(recipes, recipeType);
       }
 
       // Load recipe details if on recipe.html
