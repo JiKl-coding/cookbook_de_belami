@@ -162,6 +162,9 @@ document.addEventListener("DOMContentLoaded", function() {
           document.getElementById('recipe-portions').textContent = selectedRecipe.portions;
           document.getElementById('recipe-desc').innerHTML = selectedRecipe.desc;
 
+          // Set the document title to the recipe name
+          document.title = selectedRecipe.name;
+
           const ingredientsTable = document.getElementById('ingredients-table');
           selectedRecipe.ingredients.forEach(ingredient => {
             if (ingredient.includes('<') && ingredient.includes('>')) {
