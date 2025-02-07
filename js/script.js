@@ -120,11 +120,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Determine the type of recipes to display based on the current page
       let recipeType;
-      if (currentPage === 'main_dish.html') {
+      if (currentPage === 'hlavni-chody') {
         recipeType = 'dish';
-      } else if (currentPage === 'appetizers.html') {
+      } else if (currentPage === 'snidane-a-predkrmy') {
         recipeType = 'appetizer';
-      } else if (currentPage === 'desserts.html') {
+      } else if (currentPage === 'dezerty') {
         recipeType = 'dessert';
       }
 
