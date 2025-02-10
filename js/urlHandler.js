@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         window.history.replaceState({}, '', '/hlavni-chody');
     } else if (path === "/desserts.html") {
         window.history.replaceState({}, '', '/dezerty');
-    } else if (path.startsWith("/recipe.html?id=")) {
-        window.history.replaceState({}, '', path.replace("/recipe.html?id=", "/recept="));
     } else if (path.endsWith('/')) {
         window.history.replaceState({}, '', path.slice(0, -1));
     } else if (!path.includes('.')) {
