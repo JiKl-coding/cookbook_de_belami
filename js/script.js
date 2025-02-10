@@ -19,12 +19,13 @@ document.addEventListener("DOMContentLoaded", function() {
       const navLinks = document.querySelectorAll('.navbar-links a');
       navLinks.forEach(link => {
         const href = link.getAttribute('href');
+        console.log(href, currentPage);
         if (href === currentPage || 
-            (currentPage === '' && href === 'index.html') || 
-            (currentPage === 'main_dish.html' && href === 'main_dish.html') || 
-            (currentPage === 'menus.html' && href === 'menus.html') || 
-            (currentPage === 'appetizers.html' && href === 'appetizers.html') || 
-            (currentPage === 'desserts.html' && href === 'desserts.html')) {
+            (currentPage === 'home' && href === 'index.html') || 
+            (currentPage === 'hlavni-chody' && href === 'main_dish.html') || 
+            (currentPage === 'menu' && href === 'menus.html') || 
+            (currentPage === 'snidane-a-predkrmy' && href === 'appetizers.html') || 
+            (currentPage === 'dezerty' && href === 'desserts.html')) {
           link.style.textDecoration = 'underline';
         }
       });

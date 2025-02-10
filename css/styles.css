@@ -247,6 +247,14 @@ table th {
   margin-top: 10vh;
 }
 
+.error-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 75vh;
+}
+
 @media (max-width: 900px) {
   h2 {
     font-size: 2rem;

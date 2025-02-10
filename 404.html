@@ -4,9 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stránka nenalezena</title>
-    <script>
-    </script>
     <link rel="stylesheet" href="css/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/icons/main_icon.png">
+
+    <link rel="icon" href="assets/icons/favicon.png" type="image/x-icon">
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+            const path = window.location.pathname;
+            if (path === "/" || path === "/home" || path === "/home/") {
+                window.location.replace("/index.html");
+            } else if (path === "/snidane-a-predkrmy" || path === "/snidane-a-predkrmy/") {
+                window.location.replace("/appetizers.html");
+            } else if (path === "/hlavni-chody" || path === "/hlavni-chody/") {
+                window.location.replace("/main-dish.html");
+            } else if (path === "/dezerty" || path === "/dezerty/") {
+                window.location.replace("/desserts.html");
+            } else {
+                window.location.replace("/index.html");
+        }});
+    </script>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <div class="error-container">
