@@ -29,6 +29,16 @@
             } else {
                 window.location.replace("/index.html");
         }});
+
+        // Delay the display of the error container
+      document.addEventListener("DOMContentLoaded", () => {
+        const errorContainer = document.querySelector('.error-container');
+        errorContainer.style.display = 'none';
+        setTimeout(() => {
+          errorContainer.style.display = 'block';
+        }, 1000); // 1 second delay
+      });
+      
     </script>
     <link rel="stylesheet" href="css/styles.css"/>
     <script src="js/script.js" defer></script>
