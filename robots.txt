@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /data/
+Disallow: /partials/
+Allow: /
+
+Sitemap: https://www.belamicookbook.cz/sitemap.xml
