@@ -220,6 +220,18 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// Dynamicky nastaví <h1> pro SEO na stránce recipe.html
+document.addEventListener('DOMContentLoaded', function() {
+  const h1 = document.getElementById('recipe-title-h1');
+  if (h1) {
+    // Předpokládáme, že název receptu je v elementu s id "recipe-title" nebo podobném
+    const recipeTitleEl = document.getElementById('recipe-title');
+    if (recipeTitleEl && recipeTitleEl.textContent.trim() !== '') {
+      h1.textContent = recipeTitleEl.textContent.trim() + ' - Cookbook de Bel-Ami';
+    }
+  }
+});
+
 class Recipe {
   constructor(id, name, type, image, portions, ingredients, desc) {
     this.id = id;
