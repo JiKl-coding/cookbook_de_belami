@@ -35,6 +35,12 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(response => response.text())
     .then(data => {
       document.querySelector('.footer-placeholder').innerHTML = data;
+
+      // ✨ Dynamicky doplníme aktuální rok do footeru
+      const yearEl = document.getElementById('year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
     });
 
   // Load and parse recipes.csv
